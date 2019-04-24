@@ -2,14 +2,15 @@ const koaBody = require('koa-body');
 const router = require('koa-router')();
 const User = require('../model/user');
 
-router.get('/users', async (ctx, next) => {
+router.get('/user', async (ctx, next) => {
   const user = await User.findAll({
       where: { isdelete: 0 },
   })
   ctx.body = user;
 });
 
-router.post('/user', koaBody(), async (ctx) => {
+router.post('/user', async (ctx) => {
+  console.log(ctx.request.body, 'ctx.request.body')
   const user = await User.build(ctx.request.body).save();
   ctx.body = user;
 })
