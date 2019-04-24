@@ -1,6 +1,8 @@
 **/node_modules
 /dist
 /logs
+/src/config/mysql.config.js
+
 .vscode
 
 yarn.lock
