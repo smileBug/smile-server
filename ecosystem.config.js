@@ -21,7 +21,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'root',
-      host : '176.122.139.155',
+      host : {host: '176.122.139.155', port: '28351'},
       ref  : 'origin/master',
       repo : 'git@github.com:smileBug/smile-server.git',
       path : '/var/www/production',
