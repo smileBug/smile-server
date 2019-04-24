@@ -2,7 +2,7 @@ module.exports = {
   apps : [{
     name: 'API',
     script: './src/app.js',
-    log: './outerr.log',
+    log: './logs/outerr.log',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
